@@ -1,0 +1,15 @@
+displayName = Stella Aurum
+author = StellarWitch7
+version = 0.1
+homepage=https://github.com/StellarWitch7/Stella-Aurum
+dllReferences=
+modReferences=
+weakReferences=
+buildIgnore=*.csproj, *.user, obj\*, bin\*, .vs\*, old\*, .git*
+languageVersion=6
+side=Both
+noCompile=false
+hideCode=false
+hideResources=false
+includeSource=true
+includePDB=true
