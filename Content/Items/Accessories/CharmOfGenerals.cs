@@ -6,14 +6,6 @@ namespace StellaAurum.Content.Items.Accessories
 {
     internal class CharmOfGenerals : ModItem
     {
-        public override void SetStaticDefaults()
-        {
-            // By default, capitalization in classnames will add spaces to the display name.
-            // You can customize the display name here by uncommenting this line.
-            DisplayName.SetDefault("Charm of Generals");
-            Tooltip.SetDefault("The spirit of a thousand armies rests within");
-        }
-
         public override void SetDefaults()
         {
             Item.width = 20;

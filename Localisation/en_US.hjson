@@ -1,0 +1,27 @@
+﻿
+Mods: {
+	StellarAurum: {
+		ItemName: {
+			CharmOfGenerals: Charm of Generals
+		}
+
+		ItemTooltip: {
+			CharmOfGenerals:
+				'''
+				Increases Weapon Damage by 25%
+				Increases Melee Crit Chance by 20%
+				Increases Melee Knockback by 50%
+				Increases Ranged Attack Speed by 50%
+				Increases Magic Armour Penetration by 5 points
+				Increases Maximum Minions by 10
+				'''
+		}
+
+		Items: {
+			CharmOfGenerals: {
+				DisplayName: Charm of Generals
+				Tooltip: "The spirit of a thousand armies rests within"
+			}
+		}
+	}
+}
