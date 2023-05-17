@@ -1,10 +1,12 @@
-﻿using Terraria;
+﻿using Microsoft.Xna.Framework;
+using Terraria;
+using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace StellaAurum.Items
+namespace StellaAurum.Content.Items.Weapons.Magic
 {
-    public class StellarianAurus : ModItem
+    internal class StellarianAurus : ModItem
     {
         public override void SetStaticDefaults()
         {
@@ -13,28 +15,33 @@ namespace StellaAurum.Items
             DisplayName.SetDefault("Stellarian Aurus");
             Tooltip.SetDefault("The power of the stars rests within");
         }
+
         public override void SetDefaults()
         {
-            Item.damage = 112;
+            Item.damage = 54;
             Item.DamageType = DamageClass.Magic;
             Item.width = 40;
             Item.height = 40;
-            Item.useTime = 23;
-            Item.useAnimation = 23;
-            Item.useStyle = ItemUseStyleID.Shoot;
+            Item.useTime = 5;
+            Item.useAnimation = 5;
+            Item.useStyle = ItemUseStyleID.HoldUp;
             Item.knockBack = 5;
             Item.value = 1000;
+            Item.mana = 4;
             Item.rare = ItemRarityID.Expert;
             Item.UseSound = SoundID.Roar;
+            Item.expertOnly = true;
             Item.autoReuse = true;
-            Item.shoot = ProjectileID.FallingStar;
-            Item.shootSpeed = 10f;
+            Item.shoot = ProjectileID.MoonlordBullet;
+            Item.shootSpeed = 8f;
             Item.noMelee = true;
+            Item.crit = 12;
         }
 
-        public override void OnHitNPC(Player player, NPC target, int damage, float knockBack, bool crit)
+        public virtual bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source,
+            Vector2 position, Vector2 velocity, int type, int damage, float knockback)
         {
-            target.AddBuff(BuffID.Darkness, 120);
+            return true;
         }
 
         public override void AddRecipes()
@@ -43,7 +50,7 @@ namespace StellaAurum.Items
             recipe.AddIngredient(ItemID.FallenStar, 50);
             recipe.AddIngredient(ItemID.GoldBar, 15);
             recipe.AddIngredient(ItemID.LunarBar, 20);
-            recipe.AddTile(TileID.MythrilAnvil);
+            recipe.AddTile(TileID.LunarCraftingStation);
             recipe.Register();
         }
     }

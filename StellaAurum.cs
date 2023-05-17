@@ -4,5 +4,6 @@ namespace StellaAurum
 {
 	public class StellaAurum : Mod
 	{
+
 	}
 }
