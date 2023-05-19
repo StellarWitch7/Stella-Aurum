@@ -12,7 +12,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Common\Systems\GenPasses\" />
-    <Folder Include="Content\Items\Armour\" />
     <Folder Include="Content\Items\Weapons\Melee\" />
     <Folder Include="Content\Items\Weapons\Summon\" />
     <Folder Include="Content\Items\Weapons\Range\" />

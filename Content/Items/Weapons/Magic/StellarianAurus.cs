@@ -8,14 +8,6 @@ namespace StellaAurum.Content.Items.Weapons.Magic
 {
     internal class StellarianAurus : ModItem
     {
-        public override void SetStaticDefaults()
-        {
-            // By default, capitalization in classnames will add spaces to the display name.
-            // You can customize the display name here by uncommenting this line.
-            DisplayName.SetDefault("Stellarian Aurus");
-            Tooltip.SetDefault("The power of the stars rests within");
-        }
-
         public override void SetDefaults()
         {
             Item.damage = 54;
